@@ -44,7 +44,7 @@
 						<li><a href="${pageContext.request.contextPath }/lookQr">查看确认信息</a></li>
 						<li><a href="${pageContext.request.contextPath }/lookSmh">查看说明会回执信息</a></li>
 						<li class="active"><a>查看大赛回执信息</a></li>
-						<li><a href="${pageContext.request.contextPath }/index.jsp">回到首页</a>
+						<li><a href="${pageContext.request.contextPath }/index.jsp" target="_blank">回到首页</a>
 						</li>
 
 					</ul>
@@ -108,7 +108,8 @@
 				style="text-align: center">
 				<h5 class="text-muted credit" style="padding: 5px;">易晨网站 | 软件测试
 					| 山东劳动职业技术学院 | 技术支持</h5>
-				<h5 class="text-muted credit" style="padding: 5px;">鲁ICP备17040550号-1</h5>
+				<h5 class="text-muted credit" style="padding: 5px;">www.eachwang.com
+					| 鲁ICP备17040550号-1</h5>
 				<h5 class="text-muted credit" style="padding: 5px;">&copy;2016-2017</h5>
 			</div>
 		</nav>

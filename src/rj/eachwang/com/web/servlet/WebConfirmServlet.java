@@ -32,14 +32,14 @@ public class WebConfirmServlet extends HttpServlet {
 		} catch (SQLException e) {
 			e.printStackTrace();
 			// 错误
-			request.setAttribute("msg", "系统繁忙, 错误代码:10010");
+			request.setAttribute("msg", "系统繁忙");
 			request.setAttribute("result", 3);
 			request.getRequestDispatcher("/msg.jsp").forward(request, response);
 			return;
 		}
 		if (i == 0) {
 			// 关闭中
-			request.setAttribute("msg", "该服务暂未开启, 请等待开启, 错误代码:10011");
+			request.setAttribute("msg", "该服务暂未开启, 请等待开启");
 			request.setAttribute("result", 3);
 			request.getRequestDispatcher("/msg.jsp").forward(request, response);
 			return;
@@ -52,7 +52,7 @@ public class WebConfirmServlet extends HttpServlet {
 
 		}
 		if (uuidCookieStr == null || uuidCookieStr.equals("")) {
-			request.setAttribute("msg", "请您登录, 错误代码:10012");
+			request.setAttribute("msg", "您尚未登录, 请登录");
 			request.setAttribute("result", 1);
 			request.getRequestDispatcher("/msg.jsp").forward(request, response);
 			return;

@@ -29,14 +29,14 @@ public class WebSmhServlet extends HttpServlet {
 		} catch (SQLException e) {
 			e.printStackTrace();
 			// 错误
-			request.setAttribute("msg", "系统繁忙, 错误代码:10015");
+			request.setAttribute("msg", "系统繁忙");
 			request.setAttribute("result", 3);
 			request.getRequestDispatcher("/msg.jsp").forward(request, response);
 			return;
 		}
 		if (i == 0) {
 			// 关闭中
-			request.setAttribute("msg", "该服务暂未开启, 请等待开启, 错误代码:10016");
+			request.setAttribute("msg", "该服务暂未开启, 请等待开启");
 			request.setAttribute("result", 3);
 			request.getRequestDispatcher("/msg.jsp").forward(request, response);
 			return;
@@ -49,7 +49,7 @@ public class WebSmhServlet extends HttpServlet {
 
 		}
 		if (uuidCookieStr == null || uuidCookieStr.equals("")) {
-			request.setAttribute("msg", "请您登录, 错误代码:10017");
+			request.setAttribute("msg", "请您登录");
 			request.setAttribute("result", 1);
 			request.getRequestDispatcher("/msg.jsp").forward(request, response);
 			return;
@@ -63,7 +63,7 @@ public class WebSmhServlet extends HttpServlet {
 			e.printStackTrace();
 		}
 		if (postSmh) {
-			request.setAttribute("msg", "您已提交过说明会回执, 无法再次提交, 错误代码:10024");
+			request.setAttribute("msg", "您已提交过说明会回执, 无法再次提交");
 			request.setAttribute("result", 3);
 			request.getRequestDispatcher("/msg.jsp").forward(request, response);
 		} else {

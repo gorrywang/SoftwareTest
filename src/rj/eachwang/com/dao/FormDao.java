@@ -55,8 +55,8 @@ public class FormDao {
 	public int setConfirmData(String schoolname, String lead, String tea1, String tea2, String tel1, String tel2,
 			String stu1, String stu2, String stu3, String uuidCookieStr) throws SQLException {
 		QueryRunner runner = new QueryRunner(DataSourceUtils.getDataSource());
-		String sql = "update confirm set schoolname = ? , lead = ? ,  teacher1 = ? , teacher2 = ? ,tel1 = ? , tel2 = ? , stu1 = ? , stu2 = ? , stu3 = ? , ok = 1";
-		return runner.update(sql, schoolname, lead, tea1, tea2, tel1, tel2, stu1, stu2, stu3);
+		String sql = "update confirm set schoolname = ? , lead = ? ,  teacher1 = ? , teacher2 = ? ,tel1 = ? , tel2 = ? , stu1 = ? , stu2 = ? , stu3 = ? , ok = 1 where uuid = ?";
+		return runner.update(sql, schoolname, lead, tea1, tea2, tel1, tel2, stu1, stu2, stu3, uuidCookieStr);
 	}
 
 	/**

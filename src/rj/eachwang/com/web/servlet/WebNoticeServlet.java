@@ -29,8 +29,8 @@ public class WebNoticeServlet extends HttpServlet {
 		} catch (SQLException e) {
 			e.printStackTrace();
 			System.out.println("服务器繁忙");
-			request.setAttribute("msg", "服务器繁忙, 错误代码:10003");
-			request.setAttribute("result", 2);
+			request.setAttribute("msg", "服务器繁忙");
+			request.setAttribute("result", 3);
 			request.getRequestDispatcher("/msg.jsp").forward(request, response);
 			return;
 		}

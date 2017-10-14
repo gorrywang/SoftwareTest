@@ -29,7 +29,7 @@ public class WebLoginServlet extends HttpServlet {
 		if ((password == null) || (username == null) || username == "" || password == "") {
 			// *****缺少参数，请重新登录
 			System.out.println("请填写完整登录信息");
-			request.setAttribute("msg", "请填写完整登录信息, 错误代码:10000");
+			request.setAttribute("msg", "请填写完整登录信息");
 			request.setAttribute("result", 1);
 			request.getRequestDispatcher("/msg.jsp").forward(request, response);
 			return;
@@ -42,7 +42,7 @@ public class WebLoginServlet extends HttpServlet {
 			e.printStackTrace();
 			// 出错误,稍后再试
 			System.out.println("数据库出现错误, 请稍后再试");
-			request.setAttribute("msg", "数据库出现错误, 请稍后再试, 错误代码:10001");
+			request.setAttribute("msg", "数据库出现错误, 请稍后再试");
 			request.setAttribute("result", 1);
 			request.getRequestDispatcher("/msg.jsp").forward(request, response);
 			return;
@@ -50,7 +50,7 @@ public class WebLoginServlet extends HttpServlet {
 		if (user == null) {
 			// 没有此用户
 			System.out.println("请检查用户名或密码是否正确");
-			request.setAttribute("msg", "请检查用户名或密码是否正确, 错误代码:10002");
+			request.setAttribute("msg", "请检查用户名或密码是否正确");
 			request.setAttribute("result", 1);
 			request.getRequestDispatcher("/msg.jsp").forward(request, response);
 			return;

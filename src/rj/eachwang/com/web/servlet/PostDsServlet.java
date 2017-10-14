@@ -29,7 +29,7 @@ public class PostDsServlet extends HttpServlet {
 
 		}
 		if (uuidCookieStr == null || uuidCookieStr.equals("")) {
-			request.setAttribute("msg", "请您登录, 错误代码:10041");
+			request.setAttribute("msg", "您尚未登录, 请登录");
 			request.setAttribute("result", 1);
 			request.getRequestDispatcher("/msg.jsp").forward(request, response);
 			return;
@@ -61,7 +61,7 @@ public class PostDsServlet extends HttpServlet {
 					bjnum, cometime, gotime, car, jz, bz);
 		} catch (SQLException e) {
 			e.printStackTrace();
-			request.setAttribute("msg", "服务器异常, 错误代码:10042");
+			request.setAttribute("msg", "服务器异常");
 			request.setAttribute("result", 6);
 			request.getRequestDispatcher("/msg.jsp").forward(request, response);
 			return;
@@ -73,7 +73,7 @@ public class PostDsServlet extends HttpServlet {
 			request.getRequestDispatcher("/msg.jsp").forward(request, response);
 		} else if (i == -1) {
 			System.out.println("数据已提交过");
-			request.setAttribute("msg", "您已提交过大赛回执, 无法再次提交, 错误代码:10043");
+			request.setAttribute("msg", "您已提交过大赛回执, 无法再次提交");
 			request.setAttribute("result", 3);
 			request.getRequestDispatcher("/msg.jsp").forward(request, response);
 		}

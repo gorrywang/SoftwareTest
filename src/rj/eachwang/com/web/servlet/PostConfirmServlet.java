@@ -29,7 +29,7 @@ public class PostConfirmServlet extends HttpServlet {
 
 		}
 		if (uuidCookieStr == null || uuidCookieStr.equals("")) {
-			request.setAttribute("msg", "请您登录, 错误代码:10013");
+			request.setAttribute("msg", "您尚未登录, 请登录");
 			request.setAttribute("result", 1);
 			request.getRequestDispatcher("/msg.jsp").forward(request, response);
 			return;
@@ -51,7 +51,7 @@ public class PostConfirmServlet extends HttpServlet {
 					uuidCookieStr);
 		} catch (SQLException e) {
 			e.printStackTrace();
-			request.setAttribute("msg", "服务器异常, 请稍后再试, 错误代码:10014");
+			request.setAttribute("msg", "服务器异常, 请稍后再试");
 			request.setAttribute("result", 3);
 			request.getRequestDispatcher("/msg.jsp").forward(request, response);
 			return;
@@ -62,7 +62,7 @@ public class PostConfirmServlet extends HttpServlet {
 			request.setAttribute("result", 4);
 			request.getRequestDispatcher("/msg.jsp").forward(request, response);
 		} else {
-			request.setAttribute("msg", "修改失败, 错误代码:10015");
+			request.setAttribute("msg", "修改失败");
 			request.setAttribute("result", 3);
 			request.getRequestDispatcher("/msg.jsp").forward(request, response);
 

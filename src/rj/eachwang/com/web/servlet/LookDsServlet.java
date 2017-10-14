@@ -30,7 +30,7 @@ public class LookDsServlet extends HttpServlet {
 			nameCookieStr = getCookie(request, "username");
 			uuidCookieStr = getCookie(request, "uuid");
 		} catch (Exception e) {
-			request.setAttribute("msg", "您尚未登录, 请登录, 错误代码:10061");
+			request.setAttribute("msg", "您尚未登录, 请登录");
 			request.setAttribute("result", 1);
 			request.getRequestDispatcher("/msg.jsp").forward(request, response);
 			return;
@@ -41,20 +41,20 @@ public class LookDsServlet extends HttpServlet {
 			user = new UserService().getUserByUuidAndName(nameCookieStr, uuidCookieStr);
 		} catch (SQLException e) {
 			e.printStackTrace();
-			request.setAttribute("msg", "服务器发生错误, 错误代码:10062");
+			request.setAttribute("msg", "服务器发生错误");
 			request.setAttribute("result", 2);
 			request.getRequestDispatcher("/msg.jsp").forward(request, response);
 			return;
 		}
 		if (nameCookieStr == null || uuidCookieStr == null) {
-			request.setAttribute("msg", "您尚未登录, 请登录, 错误代码:10051");
+			request.setAttribute("msg", "您尚未登录, 请登录");
 			request.setAttribute("result", 1);
 			request.getRequestDispatcher("/msg.jsp").forward(request, response);
 			return;
 		}
 		if (user == null || !(user.getUsername().equals("admin"))) {
 			// 不是管理员
-			request.setAttribute("msg", "抱歉, 您不是管理员, 错误代码:10063");
+			request.setAttribute("msg", "抱歉, 您不是管理员");
 			request.setAttribute("result", 3);
 			request.getRequestDispatcher("/msg.jsp").forward(request, response);
 			return;

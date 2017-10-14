@@ -44,7 +44,7 @@
 						<li class="active"><a>查看确认信息</a></li>
 						<li><a href="${pageContext.request.contextPath }/lookSmh">查看说明会回执信息</a></li>
 						<li><a href="${pageContext.request.contextPath }/lookDs">查看大赛回执信息</a></li>
-						<li><a href="${pageContext.request.contextPath }/index.jsp">回到首页</a>
+						<li><a href="${pageContext.request.contextPath }/index.jsp" target="_blank">回到首页</a>
 						</li>
 
 					</ul>
@@ -55,22 +55,7 @@
 
 	<div class="container">
 		<h2>已提交的大赛回执</h2>
-		
-		<!-- 
-			private int id;
-			private String schoolname;
-			private String lead;
-			private String teacher1;
-			private String teacher2;
-			private String tel1;
-			private String tel2;
-			private String stu1;
-			private String stu2;
-			private String stu3;
-			private int ok;
-		
-		 -->
-		
+
 		<table class="table table-striped">
 			<thead>
 				<tr>
@@ -79,11 +64,11 @@
 					<th>领队</th>
 					<th>指导老师1</th>
 					<th>指导老师2</th>
-					<th>指导老师1联系方式</th>
-					<th>指导老师2联系方式</th>
-					<th>学生1</th>
-					<th>学生2</th>
-					<th>学生3</th>
+					<th>联系方式一</th>
+					<th>联系方式二</th>
+					<th>学生一</th>
+					<th>学生二</th>
+					<th>学生三</th>
 					<th>状态</th>
 				</tr>
 			</thead>
@@ -100,7 +85,7 @@
 						<td>${t.stu1 }</td>
 						<td>${t.stu2 }</td>
 						<td>${t.stu3 }</td>
-						<td>${t.ok==0?"未确认":"已确认" }</td>
+						<td id="cc">${t.ok==0?"未确认":"已确认" }</td>
 					</tr>
 				</c:forEach>
 			</tbody>
@@ -113,7 +98,8 @@
 				style="text-align: center">
 				<h5 class="text-muted credit" style="padding: 5px;">易晨网站 | 软件测试
 					| 山东劳动职业技术学院 | 技术支持</h5>
-				<h5 class="text-muted credit" style="padding: 5px;">鲁ICP备17040550号-1</h5>
+				<h5 class="text-muted credit" style="padding: 5px;">www.eachwang.com
+					| 鲁ICP备17040550号-1</h5>
 				<h5 class="text-muted credit" style="padding: 5px;">&copy;2016-2017</h5>
 			</div>
 		</nav>

@@ -29,7 +29,7 @@ public class PostSmhServlet extends HttpServlet {
 
 		}
 		if (uuidCookieStr == null || uuidCookieStr.equals("")) {
-			request.setAttribute("msg", "请您登录, 错误代码:10022");
+			request.setAttribute("msg", "您尚未登录, 请登录");
 			request.setAttribute("result", 1);
 			request.getRequestDispatcher("/msg.jsp").forward(request, response);
 			return;
@@ -57,7 +57,7 @@ public class PostSmhServlet extends HttpServlet {
 					cometime, gotime, bz);
 		} catch (SQLException e) {
 			e.printStackTrace();
-			request.setAttribute("msg", "服务器异常, 错误代码:10023");
+			request.setAttribute("msg", "服务器异常");
 			request.setAttribute("result", 5);
 			request.getRequestDispatcher("/msg.jsp").forward(request, response);
 			return;
@@ -69,7 +69,7 @@ public class PostSmhServlet extends HttpServlet {
 			request.getRequestDispatcher("/msg.jsp").forward(request, response);
 		} else if (i == -1) {
 			System.out.println("数据已提交过");
-			request.setAttribute("msg", "您已提交过说明会回执, 无法再次提交, 错误代码:10024");
+			request.setAttribute("msg", "您已提交过说明会回执, 无法再次提交");
 			request.setAttribute("result", 3);
 			request.getRequestDispatcher("/msg.jsp").forward(request, response);
 		}

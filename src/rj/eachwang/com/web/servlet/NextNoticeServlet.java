@@ -28,7 +28,7 @@ public class NextNoticeServlet extends HttpServlet {
 			nameCookieStr = getCookie(request, "username");
 			uuidCookieStr = getCookie(request, "uuid");
 		} catch (Exception e) {
-			request.setAttribute("msg", "您尚未登录, 请登录, 错误代码:10008");
+			request.setAttribute("msg", "您尚未登录, 请登录");
 			request.setAttribute("result", 1);
 			request.getRequestDispatcher("/msg.jsp").forward(request, response);
 			return;
@@ -46,7 +46,7 @@ public class NextNoticeServlet extends HttpServlet {
 		} catch (SQLException e) {
 			e.printStackTrace();
 			// 出现错误
-			request.setAttribute("msg", "服务器出现错误, 请稍后再试, 错误代码:10007");
+			request.setAttribute("msg", "服务器出现错误, 请稍后再试");
 			request.setAttribute("result", 2);
 			request.getRequestDispatcher("/msg.jsp").forward(request, response);
 			return;
@@ -58,12 +58,12 @@ public class NextNoticeServlet extends HttpServlet {
 			request.getRequestDispatcher("/msg.jsp").forward(request, response);
 		} else if (i == -1) {
 			// 用户不存在
-			request.setAttribute("msg", "您尚未登录, 请登录, 错误代码:10008");
+			request.setAttribute("msg", "您尚未登录, 请登录");
 			request.setAttribute("result", 1);
 			request.getRequestDispatcher("/msg.jsp").forward(request, response);
 		} else if (i == -2) {
 			// 非管理员
-			request.setAttribute("msg", "您不是管理员, 无法使用, 错误代码:10009");
+			request.setAttribute("msg", "您不是管理员, 无法使用");
 			request.setAttribute("result", 2);
 			request.getRequestDispatcher("/msg.jsp").forward(request, response);
 		}

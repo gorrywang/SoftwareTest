@@ -65,17 +65,29 @@
 				<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
 				<li data-target="#myCarousel" data-slide-to="1"></li>
 				<li data-target="#myCarousel" data-slide-to="2"></li>
+				<li data-target="#myCarousel" data-slide-to="3"></li>
+				<li data-target="#myCarousel" data-slide-to="4"></li>
+				<li data-target="#myCarousel" data-slide-to="5"></li>
 			</ol>
 			<!-- 轮播（Carousel）项目 -->
 			<div class="carousel-inner">
 				<div class="item active">
-					<img src="img/b1.jpg" alt="First slide" width="100%">
+					<img src="img/banner-02.jpg" alt="First slide" width="100%">
 				</div>
 				<div class="item">
-					<img src="img/b2.jpg" alt="Second slide" width="100%">
+					<img src="img/banner-01.jpg" alt="Second slide" width="100%">
 				</div>
 				<div class="item">
-					<img src="img/b3.jpg" alt="Third slide" width="100%">
+					<img src="img/banner-03.jpg" alt="Third slide" width="100%">
+				</div>
+				<div class="item">
+					<img src="img/banner-04.jpg" alt="Third slide" width="100%">
+				</div>
+				<div class="item">
+					<img src="img/banner-05.jpg" alt="Third slide" width="100%">
+				</div>
+				<div class="item">
+					<img src="img/banner-06.jpg" alt="Third slide" width="100%">
 				</div>
 			</div>
 			<!-- 轮播（Carousel）导航 -->
@@ -91,7 +103,8 @@
 				style="text-align: center">
 				<h5 class="text-muted credit" style="padding: 5px;">易晨网站 | 软件测试
 					| 山东劳动职业技术学院 | 技术支持</h5>
-				<h5 class="text-muted credit" style="padding: 5px;">鲁ICP备17040550号-1</h5>
+				<h5 class="text-muted credit" style="padding: 5px;">www.eachwang.com
+					| 鲁ICP备17040550号-1</h5>
 				<h5 class="text-muted credit" style="padding: 5px;">&copy;2016-2017</h5>
 			</div>
 		</nav>

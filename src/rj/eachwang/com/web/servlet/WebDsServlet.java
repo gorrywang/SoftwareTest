@@ -29,14 +29,14 @@ public class WebDsServlet extends HttpServlet {
 		} catch (SQLException e) {
 			e.printStackTrace();
 			// 错误
-			request.setAttribute("msg", "系统繁忙, 错误代码:10030");
+			request.setAttribute("msg", "系统繁忙");
 			request.setAttribute("result", 3);
 			request.getRequestDispatcher("/msg.jsp").forward(request, response);
 			return;
 		}
 		if (i == 0) {
 			// 关闭中
-			request.setAttribute("msg", "该服务暂未开启, 请等待开启, 错误代码:10031");
+			request.setAttribute("msg", "该服务暂未开启, 请等待开启");
 			request.setAttribute("result", 3);
 			request.getRequestDispatcher("/msg.jsp").forward(request, response);
 			return;
@@ -49,7 +49,7 @@ public class WebDsServlet extends HttpServlet {
 
 		}
 		if (uuidCookieStr == null || uuidCookieStr.equals("")) {
-			request.setAttribute("msg", "请您登录, 错误代码:10032");
+			request.setAttribute("msg", "请您登录");
 			request.setAttribute("result", 1);
 			request.getRequestDispatcher("/msg.jsp").forward(request, response);
 			return;
@@ -63,7 +63,7 @@ public class WebDsServlet extends HttpServlet {
 			e.printStackTrace();
 		}
 		if (postDs) {
-			request.setAttribute("msg", "您已提交过大赛回执, 无法再次提交, 错误代码:10033");
+			request.setAttribute("msg", "您已提交过大赛回执, 无法再次提交");
 			request.setAttribute("result", 3);
 			request.getRequestDispatcher("/msg.jsp").forward(request, response);
 		} else {

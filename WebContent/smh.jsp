@@ -141,7 +141,7 @@
 					<textarea class="form-control" rows="3" name="bz"></textarea>
 				</div>
 
-				<button type="submit" class="btn btn-default">信息无误, 确认提交</button>
+				<button type="submit" class="btn btn-default">信息无误 确认提交</button>
 
 				<h6>
 					<font color="#ff0000">*信息只可以提交一次, 请谨慎提交</font>
@@ -155,7 +155,8 @@
 				style="text-align: center">
 				<h5 class="text-muted credit" style="padding: 5px;">易晨网站 | 软件测试
 					| 山东劳动职业技术学院 | 技术支持</h5>
-				<h5 class="text-muted credit" style="padding: 5px;">鲁ICP备17040550号-1</h5>
+				<h5 class="text-muted credit" style="padding: 5px;">www.eachwang.com
+					| 鲁ICP备17040550号-1</h5>
 				<h5 class="text-muted credit" style="padding: 5px;">&copy;2016-2017</h5>
 			</div>
 		</nav>
